@@ -34,7 +34,7 @@
 
 # 请在下方写下你的命令（删除下面的 echo 语句并替换为你的命令，下面每一题都同理）
 cd ./generated
-mkdir -p ./generated/workspace
+mkdir workspace
 mkdir -p ./generated/workspace/scripts
 mkdir -p ./generated/workspace/data
 cd ..
@@ -43,7 +43,7 @@ cd ..
 #       hello.sh 和 utils.sh
 
 # 请在下方写下你的命令
-
+cd ./generated/workspace/scripts
 touch ./generated/workspace/scripts/hello.sh
 touch ./generated/workspace/scripts/utils.sh
 
