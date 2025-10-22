@@ -34,15 +34,16 @@
 
 # 请在下方写下你的命令（删除下面的 echo 语句并替换为你的命令，下面每一题都同理）
 echo "任务 1: 请完成创建目录结构的命令"
-
-
+mdkir -p ./generated/workspace/scripts
+mdkir -p ./generated/workspace/data
 # 任务 2: 创建文件
 # 要求：在 ./generated/workspace/scripts/ 目录下创建两个空文件：
 #       hello.sh 和 utils.sh
 
 # 请在下方写下你的命令
 echo "任务 2: 请完成创建文件的命令"
-
+touch ./generated/workspace/scripts/hello.sh
+touch ./generated/workspace/scripts/utils.sh
 
 # 任务 3: 创建文件内容
 # 要求：在 ./generated/workspace/scripts/hello.sh 文件中写入以下内容（每一行开头无空格）：
@@ -52,21 +53,24 @@ echo "任务 2: 请完成创建文件的命令"
 
 # 请在下方写下你的命令
 echo "任务 3: 请完成创建文件内容的命令"
-
+cat <<EOL > ./generated/workspace/scripts/hello.sh
+#!/bin/bash
+echo "Hello, Linux!"
+EOL
 
 # 任务 4: 删除文件
 # 要求：删除 ./generated/workspace/scripts/utils.sh 文件
 
 # 请在下方写下你的命令
 echo "任务 4: 请完成删除文件的命令"
-
+rm ./generated/workspace/scripts/utils.sh
 
 # 任务 5: 使用 rm 删除目录
 # 要求：删除 ./generated/workspace/data/ 目录
 
 # 请在下方写下你的命令
 echo "任务 5: 请完成删除目录的命令"
-
+rm -r ./generated/workspace/data/
 
 # 任务 6: 使用 cat 和 grep 创建和搜索文件
 # 要求：
@@ -79,7 +83,14 @@ echo "任务 5: 请完成删除目录的命令"
 
 # 请在下方写下你的命令
 echo "任务 6: 请完成创建文件和搜索的命令"
-
+touch ./generated/workspace/info.txt
+cat <<EOL > ./generated/workspace/info.txt
+Linux is a powerful operating system.
+Bash scripting is fun and useful.
+Command line tools are essential for developers.
+EOL
+touch ./generated/workspace/result.txt
+grep "Linux" ./generated/workspace/info.txt > ./generated/workspace/result.txt
 
 # ============================================================================
 # 脚本结束
